@@ -1,38 +1,97 @@
+*{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 60vh;
+  background-color: aliceblue;
   display: flex;
-  flex-direction: column;
+  justify-content:center ;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+img{
+  max-width: 100%;
+}
+li>div{
+  width:20px;
+display: none;
+height:20px;
+border-radius: 50%;
+padding:2px;
+}
+li>div:hover{
+  display: flex;
+justify-content: center;
+align-items: center;
+  background-color:rgb(203, 202, 202) ;
+  cursor: pointer;
+}
+li:hover>div{
+  display: block;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.MuiOutlinedInput-root {
+  border-radius: 32px !important;
+  background-color: rgb(217, 217, 217);
+  height:64px;
+  border-color:rgb(107, 106, 106)!important;
+  position:relative;
+  z-index: 10;
+  padding-inline:20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.MuiOutlinedInput-root:focus{
+  border-color:rgb(107, 106, 106)!important;
+
+
+}
+.cont{
+  width:600px;
+  position:relative;
+  
+}
+.li{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  padding:0;
+  margin:0;
+  overflow: hidden;
+}
+.dropdown{
+top:0;
+display: none;
+ right:0;
+  width:100%;
+padding-top: 64px;
+  border-radius:32px!important;
+  border-top-left-radius: 32px !important;
+  border-top-right-radius: 32px !important;
+  z-index: 9;
+  position: absolute;
+  background-color: rgb(217, 217, 217);
+}
+.block{
+  display: block;
+}
+.search{
+  position:absolute;
+  top:50%;
+  translate:0 -50%;
+  left:5px;
+  z-index: 11;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: solid 1px rgba(0, 0, 0,0.2);
+  cursor: default;
+  min-height: 50px;
+  padding-inline:20px;
+}
+.list:last-child{
+  border:none;
 }
